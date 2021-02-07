@@ -34,7 +34,7 @@ Scripts2URL=https://gitee.com/wudongdefeng/Loon
 
 # if [[ ${WhichDep} == *github* ]]; then
 ScriptsURL=https://gitee.com/lxk0301/jd_scripts
-ShellURL=https://github.com/wudongdefeng/jd_base
+ShellURL=https://github.com/tianlanga/jd-base-1
 # else
 #   ScriptsURL=https://gitee.com/lxk0301/jd_scripts
 #   ShellURL=https://gitee.com/wudongdefeng/jd-base
