@@ -21,25 +21,48 @@ ContentNewTask=${ShellDir}/new_task
 ContentDropTask=${ShellDir}/drop_task
 SendCount=${ShellDir}/send_count
 isTermux=${ANDROID_RUNTIME_ROOT}${ANDROID_ROOT}
-ScriptsURL=git@gitee.com:lxk0301/jd_scripts
+# ScriptsURL=git@gitee.com:lxk0301/jd_scripts
+ScriptsURL=https://github.com/tianlanga/j_scripts
 ShellURL=https://github.com/tianlanga/jd-base-1
 
 ## 更新crontab，gitee服务器同一时间限制5个链接，因此每个人更新代码必须错开时间，每次执行git_pull随机生成。
 ## 每天只更新一次,(分.时.延迟)为随机cron
+# function Update_Cron {
+#   if [ -f ${ListCron} ]; then
+#     RanMin=$((${RANDOM} % 60))
+#     RanSleep=$((${RANDOM} % 56))
+#     RanH=$((${RANDOM} % 24))
+#     for ((i=1; i<14; i++)); do
+#       j=$(($i - 1))
+#       tmp=$((${RANDOM} % 3 + ${RanHourArray[j]} + 2))
+#       [[ ${tmp} -lt 24 ]] && RanHourArray[i]=${tmp} || break
+#     done
+#     perl -i -pe "s|.+(bash git_pull.+)|${RanMin} ${RanH} \* \* \* sleep ${RanSleep} && \1|" ${ListCron}
+#     crontab ${ListCron}
+#   fi
+# }
+
+## 更新crontab，gitee服务器同一时间限制5个链接，因此每个人更新代码必须错开时间，每次执行git_pull随机生成。
+## 每天次数随机，更新时间随机，更新秒数随机，至少6次，至多12次，大部分为8-10次，符合正态分布。
 function Update_Cron {
   if [ -f ${ListCron} ]; then
     RanMin=$((${RANDOM} % 60))
     RanSleep=$((${RANDOM} % 56))
-    RanH=$((${RANDOM} % 24))
+    RanHourArray[0]=$((${RANDOM} % 3))
     for ((i=1; i<14; i++)); do
       j=$(($i - 1))
       tmp=$((${RANDOM} % 3 + ${RanHourArray[j]} + 2))
       [[ ${tmp} -lt 24 ]] && RanHourArray[i]=${tmp} || break
     done
-    perl -i -pe "s|.+(bash git_pull.+)|${RanMin} ${RanH} \* \* \* sleep ${RanSleep} && \1|" ${ListCron}
+    RanHour=${RanHourArray[0]}
+    for ((i=1; i<${#RanHourArray[*]}; i++)); do
+      RanHour="${RanHour},${RanHourArray[i]}"
+    done
+    perl -i -pe "s|.+(bash git_pull.+)|${RanMin} ${RanHour} \* \* \* sleep ${RanSleep} && \1|" ${ListCron}
     crontab ${ListCron}
   fi
 }
+
 function Git_PullShell {
   echo -e "更新shell脚本，原地址：${ShellURL}\n"
   cd ${ShellDir}
