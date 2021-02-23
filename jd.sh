@@ -141,6 +141,14 @@ function Set_Env {
   Trans_UN_SUBSCRIBES
 }
 
+## 设置获取共享池助力码个数
+function Get_HelpPoolNum {
+  HelpPoolNum=$( printf "%d" "$HelpPoolNum" 2> /dev/null )
+  if [ $HelpPoolNum -lt 0 ] || [ $HelpPoolNum -gt 25 ]; then
+      HelpPoolNum=0
+  fi
+}
+
 ## 随机延迟
 function Random_Delay {
   if [[ -n ${RandomDelay} ]] && [[ ${RandomDelay} -gt 0 ]]; then
