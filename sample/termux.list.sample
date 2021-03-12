@@ -12,47 +12,69 @@ PATH=/data/data/com.termux/files/usr/bin
 
 # 重启挂机脚本，请注意，费电！！如想使用请自行解除注释！
 # 33 13 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh hangup
+0 9,12 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh whyour_ddxw
+40 0 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh whyour_jd_zjd_tuan
+35 0 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh whyour_dd_factory
+0 9 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh whyour_jdzz
+0 1,18 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh whyour_jx_factory_component
+0 9,12,18 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh whyour_jx_nc
+28 0 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh whyour_jx_factory
 
 # 运行lxk0301大佬的js脚本，仅列出长期任务作初始化用，AutoAddCron=true时，将自动添加短期任务。
 # 请保留任务名称中的前缀"jd_"，去掉后缀".js"，如果有些任务你不想运行，注释掉就好了，不要删除。
 # 非lxk0301/jd_scripts仓库中的脚本不能以“jd_”、“jr_”、“jx_”开头。请在最后保留一个空行。
-5 9 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_bean_change
-28 5 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_bean_home
-4 0,9 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_bean_sign
-0,30 0 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_blueCoin
-18 8,12,18 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_bookshop
-19 8 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_car
-17 9,22 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_cash
-0 0 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_car_exchange
-2 0 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_club_lottery
-27 13 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_crazy_joy
-54 2-23/3 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_daily_egg
-20 * * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_dreamFactory
-29 11,14,18 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_fruit
-7 7 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_get_share_code
-36 * * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_jdfactory
-14 11 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_jdzz
-6 0,8,9,13,18,22 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_joy
-*/20 0-22 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_joy_feedPets
-0 0,8,12,16 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_joy_reward
-18 11,14 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_joy_run
-0 0,6 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_joy_steal
-0 9,12,18 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_jxnc
-32 7 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_kd
-13-23/5 13 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_live
-15 1 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_lotteryMachine
-40 */4 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_moneyTree
-20 0,20 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_necklace
-10 7,12,18 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_pet
-25 * * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_pigPet
-35 7-22 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_plantBean
-11 0 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_rankingList
-1 1 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_redPacket
-0 0 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_shop
-16 0 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_small_home
-35 */3 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_speed
-9 1-23/5 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_superMarket
-25 9 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_syj
-41 14 * * 4 bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_unbind
-45 23 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jd_unsubscribe
-47 8 * * * bash /data/data/com.termux/files/home/storage/shared/jd/jd.sh jx_sign
+0 10 * * * bash /storage/emulated/0/jd/jd.sh jd_bean_change
+33 4 * * * bash /storage/emulated/0/jd/jd.sh jd_bean_home
+4 0,9 * * * bash /storage/emulated/0/jd/jd.sh jd_bean_sign
+0,30 0 * * * bash /storage/emulated/0/jd/jd.sh jd_blueCoin
+7 8,12,18 * * * bash /storage/emulated/0/jd/jd.sh jd_bookshop
+0 0 * * * bash /storage/emulated/0/jd/jd.sh jd_car
+0 0 * * * bash /storage//0/jd/jd.sh jd_car_exchange
+59 23 * * * sleep 58 && bash /storage//0/jd/jd.sh jd_car_exchange
+59 23 * * * sleep 59 && bash /storage//0/jd/jd.sh jd_car_exchange
+55 */4 * * * bash /storage/emulated/0/jd/jd.sh jd_cash
+15 */2 * * * bash /storage/emulated/0/jd/jd.sh jd_cfd
+0 0 * * * bash /storage/emulated/0/jd/jd.sh jd_club_lottery
+10 7,23 * * * bash /storage/emulated/0/jd/jd.sh jd_crazy_joy
+10 12 * * * bash /storage/emulated/0/jd/jd.sh jd_crazy_joy_bonus
+18 * * * * bash /storage/emulated/0/jd/jd.sh jd_daily_egg
+20 9 * * 6 bash /storage/emulated/0/jd/jd.sh jd_delCoupon
+20 * * * * bash /storage/emulated/0/jd/jd.sh jd_dreamFactory
+*/20 * * * * bash /storage/emulated/0/jd/jd.sh jd_family
+20 6,7 * * * bash /storage/emulated/0/jd/jd.sh jd_family
+5 6-18/6 * * * bash /storage/emulated/0/jd/jd.sh jd_fruit
+47 7 * * * bash /storage/emulated/0/jd/jd.sh jd_get_share_code
+36 * * * * bash /storage/emulated/0/jd/jd.sh jd_jdfactory
+10 11 * * * bash /storage/emulated/0/jd/jd.sh jd_jdzz
+55 */2,23 * * * bash /storage/emulated/0/jd/jd.sh jd_joy
+15 */1 * * * bash /storage/emulated/0/jd/jd.sh jd_joy_feedPets
+0 0,8,12,16 * * * bash /storage/emulated/0/jd/jd.sh jd_joy_reward
+59 7,11,15,23 * * * sleep 58 && bash /storage/emulated/0/jd/jd.sh jd_joy_reward
+59 7,11,15,23 * * * sleep 59 && bash /storage/emulated/0/jd/jd.sh jd_joy_reward
+10 9-20/2 * * * bash /storage/emulated/0/jd/jd.sh jd_joy_run
+13 0-21/3 * * * bash /storage/emulated/0/jd/jd.sh jd_joy_steal
+23 5,23 * * * bash /storage/emulated/0/jd/jd.sh jd_jxd
+0 9,12,18 * * * bash /storage/emulated/0/jd/jd.sh jd_jxnc
+23 1 * * * bash /storage/emulated/0/jd/jd.sh jd_kd
+10-20/5 12,23 * * * bash /storage/emulated/0/jd/jd.sh jd_live
+11 1 * * * bash /storage/emulated/0/jd/jd.sh jd_lotteryMachine
+0 */2 * * * bash /storage/emulated/0/jd/jd.sh jd_moneyTree
+10 7 * * * bash /storage/emulated/0/jd/jd.sh jd_ms
+20 0,20 * * * bash /storage/emulated/0/jd/jd.sh jd_necklace
+5 1,23 * * * bash /storage/emulated/0/jd/jd.sh jd_nzmh
+5 6-18/6 * * * bash /storage/emulated/0/jd/jd.sh jd_pet
+12 * * * * bash /storage/emulated/0/jd/jd.sh jd_pigPet
+0 7-22/1 * * * bash /storage/emulated/0/jd/jd.sh jd_plantBean
+10 2,23 * * * bash /storage/emulated/0/jd/jd.sh jd_price
+11 9 * * * bash /storage/emulated/0/jd/jd.sh jd_rankingList
+1 1 * * * bash /storage/emulated/0/jd/jd.sh jd_redPacket
+27 8 * * * bash /storage/emulated/0/jd/jd.sh jd_sgmh
+10 0 * * * bash /storage/emulated/0/jd/jd.sh jd_shop
+16 6,23 * * * bash /storage/emulated/0/jd/jd.sh jd_small_home
+8 */3 * * * bash /storage/emulated/0/jd/jd.sh jd_speed
+15 0,23 * * * bash /storage/emulated/0/jd/jd.sh jd_speed_redpocke
+1 1,6 * * * bash /storage/emulated/0/jd/jd.sh jd_speed_sign
+11 1-23/5 * * * bash /storage/emulated/0/jd/jd.sh jd_superMarket
+36 8,18 * * * bash /storage/emulated/0/jd/jd.sh jd_syj
+55 */6 * * * bash /storage/emulated/0/jd/jd.sh jd_unsubscribe
+39 7 * * * bash /storage/emulated/0/jd/jd.sh jx_sign
